@@ -3,7 +3,7 @@
 #
 FROM alpine
 
-EXPOSE 8118
+EXPOSE 31188
 
 RUN apk --no-cache --update add privoxy ca-certificates && \
     sed -i'' 's/127\.0\.0\.1:8118/0\.0\.0\.0:31188/' /etc/privoxy/config && \
